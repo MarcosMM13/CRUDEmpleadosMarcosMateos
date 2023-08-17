@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTec.Business", "Prueb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTec.Entities", "PruebaTec.Entities\PruebaTec.Entities.csproj", "{863B79C3-CE9E-4220-B921-FE00E1D001FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTec.View", "PruebaTec.View\PruebaTec.View.csproj", "{DEFB4403-F1C2-4175-9DAF-7F8581B54618}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTec.UI", "PruebaTec.UI\PruebaTec.UI.csproj", "{4882F252-122B-4258-BABA-F7B264D5A01E}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{863B79C3-CE9E-4220-B921-FE00E1D001FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{863B79C3-CE9E-4220-B921-FE00E1D001FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{863B79C3-CE9E-4220-B921-FE00E1D001FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DEFB4403-F1C2-4175-9DAF-7F8581B54618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DEFB4403-F1C2-4175-9DAF-7F8581B54618}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DEFB4403-F1C2-4175-9DAF-7F8581B54618}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DEFB4403-F1C2-4175-9DAF-7F8581B54618}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4882F252-122B-4258-BABA-F7B264D5A01E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4882F252-122B-4258-BABA-F7B264D5A01E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4882F252-122B-4258-BABA-F7B264D5A01E}.Release|Any CPU.ActiveCfg = Release|Any CPU
