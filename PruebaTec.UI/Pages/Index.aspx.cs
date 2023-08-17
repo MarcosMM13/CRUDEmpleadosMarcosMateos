@@ -40,6 +40,7 @@ namespace PruebaTec.UI.Pages
             Button BtnConsultar = (Button)sender;
             GridViewRow selectedRow = (GridViewRow)BtnConsultar.NamingContainer;
             id = selectedRow.Cells[1].Text;
+            employees.IdEmployee = int.Parse(id);
             Response.Redirect("~/Pages/AdmEmpleado.aspx?id=" + id + "&op=R");
         }
 
@@ -51,15 +52,7 @@ namespace PruebaTec.UI.Pages
             id = selectedRow.Cells[1].Text;
             Response.Redirect("~/Pages/AdmEmpleado.aspx?id=" + id + "&op=U");
 
-            //try
-            //{
-            //    employeeBusiness.Update(employees);
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    throw ex;
-            //}
+        
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
@@ -70,22 +63,16 @@ namespace PruebaTec.UI.Pages
             id = selectedRow.Cells[1].Text;
             Response.Redirect("~/Pages/AdmEmpleado.aspx?id=" + id + "&op=D");
 
-            //try
-            //{
-            //    employeeBusiness.Delete(employees.IdEmployee);
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    throw ex;
-            //}
+           
         }
 
         private void GetEmployeesList()
         {
             try
             {
-                employeeBusiness.GetAll();
+                List<Employees> employeesList = employeeBusiness.GetAll();
+                dgvEmpleado.DataSource = employeesList;
+                dgvEmpleado.DataBind();
             }
             catch (Exception ex)
             {

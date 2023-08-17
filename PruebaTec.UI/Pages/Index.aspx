@@ -21,13 +21,13 @@
         <br />
         <div class="container-row">
             <div class="table small">
-                <asp:GridView runat="server" ID="dgvUsuarios" class="table table-borderless tablo-hover">
+                <asp:GridView runat="server" ID="dgvEmpleado" class="table table-borderless tablo-hover">
                     <Columns>
                         <asp:TemplateField HeaderText="Acciones">
                             <ItemTemplate>
                                 <asp:Button runat="server" Text="Read" CssClass="btn form-control btn-info" ID="btnRead" OnClick="btnRead_Click"/>
-                                <asp:Button runat="server" Text="Read" CssClass="btn form-control btn-info" ID="btnUpdate" OnClick="btnUpdate_Click"/>
-                                <asp:Button runat="server" Text="Read" CssClass="btn form-control btn-info" ID="btnDelete" OnClick="btnDelete_Click"/>
+                                <asp:Button runat="server" Text="Actualizar" CssClass="btn form-control btn-warning" ID="btnUpdate" OnClick="btnUpdate_Click"/>
+                                <asp:Button runat="server" Text="Borrar" CssClass="btn form-control btn-danger" ID="btnDelete" OnClick="btnDelete_Click"/>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
