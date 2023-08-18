@@ -35,9 +35,6 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 - Validación de formularios tanto en el lado del cliente como en el lado del servidor.
 - Uso de tecnologías ASP.NET WebForms, SQL Server y Bootstrap.
 
-## Contribución
-
-Las contribuciones son bienvenidas. Por favor, consulta el archivo [CONTRIBUTING.md](CONTRIBUTING.md) para obtener más detalles.
 
 ## Licencia
 
@@ -45,4 +42,4 @@ Este proyecto está bajo la Licencia MIT.
 
 ## Contacto
 
-Puedes contactarme en [E-mail] (mateosmarcosm@gmail.com) o seguirme en [LinkdIn](www.linkedin.com/in/marcosmmateos).
+Puedes contactarme en [E-mail] (mateosmarcosm@gmail.com) o seguirme en [LinkdIn] (www.linkedin.com/in/marcosmmateos).
