@@ -10,6 +10,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using static System.Data.Entity.Infrastructure.Design.Executor;
+using PruebaTec.Business.Validations;
 
 namespace PruebaTec.UI.Pages
 {
@@ -23,7 +24,7 @@ namespace PruebaTec.UI.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             if (!Page.IsPostBack)
             {
                 if (Request.QueryString["id"] != null)
@@ -59,10 +60,20 @@ namespace PruebaTec.UI.Pages
             }
         }
 
-     
+
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
+            var validator = new EmployeeValidator();
+            var validationResult = validator.Validate(employees);
+
+            if (!validationResult.IsValid)
+            {
+                var validationErrors = validationResult.Errors.Select(error => error.ErrorMessage);
+                var errorMessage = string.Join(Environment.NewLine, validationErrors);
+                ScriptManager.RegisterStartupScript(this, GetType(), "showErrorModal", $"showErrorModal('{errorMessage}');", true);
+                return;
+            }
 
             try
             {
@@ -74,10 +85,12 @@ namespace PruebaTec.UI.Pages
                 employees.Employee_Salary = decimal.Parse(tbsalary.Text);
                 employeeBusiness.Update(employees);
 
+                ScriptManager.RegisterStartupScript(this, GetType(), "showSuccessModal", "showSuccessModal();", true);
             }
             catch (Exception ex)
             {
-                throw ex;
+                ScriptManager.RegisterStartupScript(this, GetType(), "showErrorModal", $"showErrorModal('{ex.Message}');", true);
+                return;
             }
 
             Response.Redirect("Index.aspx");
@@ -95,7 +108,7 @@ namespace PruebaTec.UI.Pages
             catch (Exception ex)
             {
 
-                throw ex;
+                ScriptManager.RegisterStartupScript(this, GetType(), "showErrorModal", $"showErrorModal('{ex.Message}');", true);
             }
 
 
@@ -109,6 +122,16 @@ namespace PruebaTec.UI.Pages
 
         protected void btnCreate_Click(object sender, EventArgs e)
         {
+            var validator = new EmployeeValidator();
+            var validationResult = validator.Validate(employees);
+
+            if (!validationResult.IsValid)
+            {
+                var validationErrors = validationResult.Errors.Select(error => error.ErrorMessage);
+                var errorMessage = string.Join(Environment.NewLine, validationErrors);
+                ScriptManager.RegisterStartupScript(this, GetType(), "showErrorModal", $"showErrorModal('{errorMessage}');", true);
+                return;
+            }
 
             try
             {
@@ -117,11 +140,16 @@ namespace PruebaTec.UI.Pages
                 employees.Employee_LastName = tblastname.Text;
                 employees.Employee_Email = tbemail.Text;
                 employees.Employee_Salary = decimal.Parse(tbsalary.Text);
+
+
                 employeeBusiness.Add(employees);
+
+                ScriptManager.RegisterStartupScript(this, GetType(), "showSuccessModal", "showSuccessModal();", true);
             }
             catch (Exception ex)
             {
-                throw ex;
+                ScriptManager.RegisterStartupScript(this, GetType(), "showErrorModal", $"showErrorModal('{ex.Message}');", true);
+                return;
             }
 
             Response.Redirect("Index.aspx");

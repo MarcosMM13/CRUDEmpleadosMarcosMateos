@@ -25,7 +25,7 @@ namespace PruebaTec.UI.Pages
             try
             {
                 Response.Redirect("~/Pages/AdmEmpleado.aspx?op=C");
-                //employeeBusiness.Add(employees);
+               
             }
             catch (Exception ex)
             {

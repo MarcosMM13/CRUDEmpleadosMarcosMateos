@@ -32,7 +32,7 @@
                             <ItemTemplate>
                                 <div class="btn-group">
                                     <div class="mb-3">
-                                        <asp:Button runat="server" Text="Actualizar" CssClass="btn btn-warning mr-2" ID="btnUpdate" OnClick="btnUpdate_Click" />
+                                        <asp:Button runat="server" Text="Modificar" CssClass="btn btn-warning mr-2" ID="btnUpdate" OnClick="btnUpdate_Click" />
                                     </div>
                                     <div class="mb-3">
                                         <asp:Button runat="server" Text="Borrar" CssClass="btn btn-danger ml-2" ID="btnDelete" OnClick="btnDelete_Click" />
