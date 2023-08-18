@@ -24,6 +24,15 @@ namespace PruebaTec.UI.Pages
         protected global::System.Web.UI.WebControls.Label lblTitle;
 
         /// <summary>
+        /// formId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm formId;
+
+        /// <summary>
         /// tbnname control.
         /// </summary>
         /// <remarks>

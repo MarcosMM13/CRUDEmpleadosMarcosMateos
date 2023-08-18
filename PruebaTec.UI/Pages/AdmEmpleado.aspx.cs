@@ -59,25 +59,7 @@ namespace PruebaTec.UI.Pages
             }
         }
 
-        protected void btnCreate_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                employees.IdEmployee = int.Parse(sID);
-                employees.Employee_Name = tbnname.Text;
-                employees.Employee_LastName = tblastname.Text;
-                employees.Employee_Email = tbemail.Text;
-                employees.Employee_Salary = decimal.Parse(tbsalary.Text);
-                employeeBusiness.Add(employees);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            Response.Redirect("Index.aspx");
-        }
+     
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -122,6 +104,26 @@ namespace PruebaTec.UI.Pages
 
         protected void BtnVolver_Click(object sender, EventArgs e)
         {
+            Response.Redirect("Index.aspx");
+        }
+
+        protected void btnCreate_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                employees.IdEmployee = int.Parse(sID);
+                employees.Employee_Name = tbnname.Text;
+                employees.Employee_LastName = tblastname.Text;
+                employees.Employee_Email = tbemail.Text;
+                employees.Employee_Salary = decimal.Parse(tbsalary.Text);
+                employeeBusiness.Add(employees);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
             Response.Redirect("Index.aspx");
         }
     }
