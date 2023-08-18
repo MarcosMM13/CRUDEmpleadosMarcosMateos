@@ -61,9 +61,7 @@ namespace PruebaTec.UI.Pages
             Button BtnConsultar = (Button)sender;
             GridViewRow selectedRow = (GridViewRow)BtnConsultar.NamingContainer;
             id = selectedRow.Cells[1].Text;
-            Response.Redirect("~/Pages/AdmEmpleado.aspx?id=" + id + "&op=D");
-
-           
+            Response.Redirect("~/Pages/DeleteForm.aspx?id=" + id + "&op=D");           
         }
 
         private void GetEmployeesList()

@@ -23,7 +23,7 @@ namespace PruebaTec.UI.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //obtener el id
+            
             if (!Page.IsPostBack)
             {
                 if (Request.QueryString["id"] != null)
@@ -43,16 +43,15 @@ namespace PruebaTec.UI.Pages
                             break;
 
                         case "R":
-                            this.lblTitle.Text = "Consulta de usuario";
+                            this.lblTitle.Text = "Consulta de empleado";
                             this.employees.IdEmployee = int.Parse(sID);
-                            this.tbnname.Text = sID;
                             break;
                         case "U":
-                            this.lblTitle.Text = "Modificar usuario";
+                            this.lblTitle.Text = "Modificar empleado";
                             this.btnUpdate.Visible = true;
                             break;
                         case "D":
-                            this.lblTitle.Text = "Eliminar usuario";
+                            this.lblTitle.Text = "Eliminar empleado";
                             this.btnDelete.Visible = true;
                             break;
                     }

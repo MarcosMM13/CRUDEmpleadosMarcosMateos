@@ -25,7 +25,7 @@
                     <Columns>
                         <asp:TemplateField HeaderText="Acciones">
                             <ItemTemplate>
-                                <asp:Button runat="server" Text="Read" CssClass="btn form-control btn-info" ID="btnRead" OnClick="btnRead_Click"/>
+                                <asp:Button runat="server" Text="Leer Registro" CssClass="btn form-control btn-info" ID="btnRead" OnClick="btnRead_Click"/>
                                 <asp:Button runat="server" Text="Actualizar" CssClass="btn form-control btn-warning" ID="btnUpdate" OnClick="btnUpdate_Click"/>
                                 <asp:Button runat="server" Text="Borrar" CssClass="btn form-control btn-danger" ID="btnDelete" OnClick="btnDelete_Click"/>
                             </ItemTemplate>
@@ -35,4 +35,5 @@
             </div>
         </div>
     </form>
+
 </asp:Content>
