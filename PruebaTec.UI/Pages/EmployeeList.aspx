@@ -1,7 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="PruebaTec.UI.Pages.Index" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="EmployeeList.aspx.cs" Inherits="PruebaTec.UI.Pages.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    Prueba Tecnica Evoltis
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -12,16 +10,7 @@
             <h2>Listado De Empleados</h2>
         </div>
         <br />
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 align-self-end text-end">
-                    <asp:Button runat="server" ID="btnCreate" CssClass="btn btn-primary" Text="Crear nuevo Empleado" Visible="True" OnClick="btnCreate_Click" />
-                </div>
-                <div class="col-md-6 align-self-end d-flex">
-                    <asp:TextBox runat="server" ID="txtSearch" CssClass="form-control flex-grow-1 me-2" placeholder="Buscar empleado..." />
-                    <asp:Button runat="server" ID="btnSearch" CssClass="btn btn-secondary" Text="Buscar" OnClick="btnSearch_Click" />
-                </div>
-            </div>
+        <div class="container">            
         </div>
         <br />
         <div class="container-row">
@@ -45,5 +34,4 @@
             </div>
         </div>
     </form>
-
 </asp:Content>

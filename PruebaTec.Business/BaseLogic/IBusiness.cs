@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PruebaTec.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,6 @@ namespace PruebaTec.Business
         void Add(T newObj);
         void Delete(int id);
         void Update(T obj);
+       
     }
 }

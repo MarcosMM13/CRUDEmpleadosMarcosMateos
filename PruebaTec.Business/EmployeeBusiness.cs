@@ -66,6 +66,17 @@ namespace PruebaTec.Business
             var categoriaId = _context.Employees.Find(id);
             return categoriaId;
         }
+        public override List<Employees> FindByName(string name)
+        {
+            try
+            {
+                return _context.Employees.Where(e => e.Employee_Name.Contains(name)).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public override void Update(Employees obj)
         {
