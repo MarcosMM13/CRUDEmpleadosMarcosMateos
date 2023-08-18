@@ -69,7 +69,16 @@ namespace PruebaTec.UI.Pages
             try
             {
                 List<Employees> employeesList = employeeBusiness.GetAll();
-                dgvEmpleado.DataSource = employeesList;
+
+                var modifiedList = employeesList.Select(emp => new {
+                    Id = emp.IdEmployee,
+                    Nombre = emp.Employee_Name,
+                    Apellido = emp.Employee_LastName,
+                    Correo = emp.Employee_Email,
+                    Salario = emp.Employee_Salary
+                });
+
+                dgvEmpleado.DataSource = modifiedList;
                 dgvEmpleado.DataBind();
             }
             catch (Exception ex)

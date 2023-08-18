@@ -21,13 +21,12 @@
         </div>
         <br />
         <div class="container-row">
-            <div class="table small">
+            <div class="table small table-striped-columns">
                 <asp:GridView runat="server" ID="dgvEmpleado" class="table table-borderless tablo-hover">
                     <Columns>
                         <asp:TemplateField HeaderText="Acciones">
                             <ItemTemplate>
-                                <div class="btn-group" role="group">
-
+                                <div class="btn-group">
                                     <div class="mb-3">
                                         <asp:Button runat="server" Text="Actualizar" CssClass="btn btn-warning mr-2" ID="btnUpdate" OnClick="btnUpdate_Click" />
                                     </div>
