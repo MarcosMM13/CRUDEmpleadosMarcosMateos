@@ -6,11 +6,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
-    <div class="mx-auto" style="width: 250px">
+    <div class="mx-auto text-center" style="width: 50%">
         <asp:Label runat="server" CssClass="h2" ID="lblTitle"></asp:Label>
     </div>
+    <br />  
     <form runat="server" class="h-100 d-flex align-items-center justify-content-center">
-        <div>
+        <div class="w-50">
             <div class="mb-3">
                 <label class="form-label">Nombre del Empleado</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbnname"></asp:TextBox>
@@ -33,9 +34,9 @@
                 
             </div>
             <div class="mb-3">
-                <asp:Button runat="server" CssClass="btn btn-primary" ID="btnCreate" Text="Create" Visible="false" OnClick="btnCreate_Click" />
-                <asp:Button runat="server" CssClass="btn btn-primary" ID="btnUpdate" Text="Update" Visible="false" OnClick="btnUpdate_Click" />
-                <asp:Button runat="server" CssClass="btn btn-primary" ID="btnDelete" Text="Delete" Visible="false" OnClick="btnDelete_Click" />
+                <asp:Button runat="server" CssClass="btn btn-primary" ID="btnCreate" Text="Crear" Visible="false" OnClick="btnCreate_Click" />
+                <asp:Button runat="server" CssClass="btn btn-primary" ID="btnUpdate" Text="Actualizar" Visible="false" OnClick="btnUpdate_Click" />
+                <asp:Button runat="server" CssClass="btn btn-primary" ID="btnDelete" Text="Eliminar" Visible="false" OnClick="btnDelete_Click" />
                 <asp:Button runat="server" CssClass="btn btn-primary btn-dark" ID="BtnVolver" Text="Volver" Visible="True" OnClick="BtnVolver_Click" />
             </div>
         </div>

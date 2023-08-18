@@ -6,9 +6,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
-    <div class="mx-auto" style="width: 250px">
-       <asp:Label runat="server" CssClass="h2" ID="lblTitle"></asp:Label>
-        <h3>¿Esta seguro que desea eliminar el registro?</h3>
+    <div class="mx-auto text-center" style="width: 50%">
+        <asp:Label runat="server" CssClass="h2" ID="lblTitle"></asp:Label>
+        <h3 class="mx-auto" style="width: 50%">¿Esta seguro que desea eliminar el registro?
+        </h3>
     </div>
 
     <form runat="server" class="h-100 d-flex align-items-center justify-content-center">
