@@ -91,10 +91,18 @@ namespace PruebaTec.UI.Pages
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             string searchName = txtSearch.Text.Trim(); 
-            List<Employees> employees = employeeBusiness.FindByName(searchName);            
-            dgvEmpleado.DataSource = employees;
+            List<Employees> employees = employeeBusiness.FindByName(searchName);
+            var modifiedList = employees.Select(emp => new {
+                Id = emp.IdEmployee,
+                Nombre = emp.Employee_Name,
+                Apellido = emp.Employee_LastName,
+                Correo = emp.Employee_Email,
+                Salario = emp.Employee_Salary
+            });
+
+            dgvEmpleado.DataSource = modifiedList;
             dgvEmpleado.DataBind();
-            
+
         }       
     }
 }
