@@ -82,8 +82,8 @@
 
             </div>
             <div class="mb-3">
-                <asp:Button runat="server" CssClass="btn btn-primary" ID="btnCreate" Text="Crear" Visible="false" OnClick="btnCreate_Click" OnClientClick="return ValidateForm();" />
-                <asp:Button runat="server" CssClass="btn btn-primary" ID="btnUpdate" Text="Actualizar" Visible="false" OnClick="btnUpdate_Click" OnClientClick="return ValidateForm();" />
+                <asp:Button runat="server" CssClass="btn btn-primary" ID="btnCreate" Text="Crear" Visible="false" OnClick="btnCreate_Click" OnClientClick="if (this.id === 'btnCreate') return ValidateForm();" />
+                <asp:Button runat="server" CssClass="btn btn-primary" ID="btnUpdate" Text="Actualizar" Visible="false" OnClick="btnUpdate_Click" OnClientClick="if (this.id === 'btnUpdate') return ValidateForm();" />
                 <asp:Button runat="server" CssClass="btn btn-primary" ID="btnDelete" Text="Eliminar" Visible="false" OnClick="btnDelete_Click" />
                 <asp:Button runat="server" CssClass="btn btn-primary btn-dark" ID="BtnVolver" Text="Volver" Visible="True" OnClick="BtnVolver_Click " />
             </div>
