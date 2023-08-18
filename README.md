@@ -20,7 +20,7 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 3. Ajusta la configuración de la conexión a la base de datos en el archivo Web.config. Al revisar el elemento <connectionStrings>, asegúrate de que se vea de esta forma:
 "<add name="EvoltisConnection" connectionString="data source=localhost\SQLEXPRESS;initial catalog=EvoltisPruebaTec;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />"
 
-4. Ejecuta el script SQL proporcionado en la carpeta `ScriptsSQL` para crear la estructura de la base de datos.
+4. Ejecuta el script SQL proporcionado en la carpeta `ScriptsSQL` para crear la estructura de la base de datos con el siguiente nombre: "SQLQueryPruebaTec.sql"
 
 ## Ejecución
 
