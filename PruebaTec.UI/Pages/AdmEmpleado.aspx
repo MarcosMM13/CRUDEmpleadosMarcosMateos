@@ -55,17 +55,18 @@
             <div class="mb-3">
                 <label class="form-label">Apellido del Empleado</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="tblastname"></asp:TextBox>
-
+                 <asp:RequiredFieldValidator runat="server" ControlToValidate="tblastname" CssClass="text-danger" Display="Dynamic" ErrorMessage="El apellido del empleado es requerido." />
             </div>
             <div class="mb-3">
                 <label class="form-label">Email</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbemail"></asp:TextBox>
-
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="tbemail" CssClass="text-danger" Display="Dynamic" ErrorMessage="El correo electrónico es requerido." />
+            <asp:RegularExpressionValidator runat="server" ControlToValidate="tbemail" CssClass="text-danger" Display="Dynamic" ErrorMessage="El correo electrónico no es válido." ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" />
             </div>
             <div class="mb-3">
                 <label class="form-label">Ingrese el salario del empleado</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbsalary"></asp:TextBox>
-
+                <asp:RegularExpressionValidator runat="server" ControlToValidate="tbsalary" CssClass="text-danger" Display="Dynamic" ErrorMessage="El salario debe ser un número válido." ValidationExpression="^\d+(\.\d{1,2})?$" />
 
             </div>
             <div class="mb-3">
